@@ -34,9 +34,9 @@ public class Armstrong {
         int a = 0, b = 0, c = num;
 
         while (num > 0) {
-            a = num % 10;//153%10=3 => first digit
-            num /= 10;
-            b = b + (a * a * a);
+            a = num % 10;//153%10=3 => first digit //15%10=5//1%10=1
+            num /= 10;//153/10=15 //15/10=1
+            b = b + (a * a * a);//3^3=b=27//5^3==125//1
         }
 
         return (c == b) ? true : false;
