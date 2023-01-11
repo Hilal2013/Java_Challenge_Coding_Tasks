@@ -6,7 +6,8 @@ public class CombineAnagrams {
     public static void main(String[] args) {
         //   List<String> list=new ArrayList<>(Arrays.asList("eat", "tea", "tam", "ate", "mat", "bat"));
         String[] arr = {"eat", "tea", "tam", "ate", "mat", "bat"};
-        List<char[]> list=new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
+        ArrayList<ArrayList<String>> innerList = new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
         char[] each=   arr[i].toCharArray();
             Arrays.sort(each);
@@ -14,12 +15,16 @@ public class CombineAnagrams {
                 char[] element  =arr[j].toCharArray();
                 Arrays.sort(element);
                 if (Arrays.equals(each, element) ){
-           list.add(each);
-
-               }
+             //       list.add(arr[i]);
+               //     list.add(i,arr[j]);
+              //    innerList.add(i,list);
+                }else{
+                    list.add(arr[i]);
+                    innerList.add(i,list);
+                }
             }
         }
-        System.out.println(list);
+        System.out.println(innerList);
     }
 }
 /*
