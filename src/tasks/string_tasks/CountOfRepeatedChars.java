@@ -1,6 +1,6 @@
 package tasks.string_tasks;
 
-public class CountOfReapetedChars {
+public class CountOfRepeatedChars {
     public static void main(String[] args) {
         System.out.println(countReapetedChars("aabcccddaaaa"));//a2b1c3d2a4
 
