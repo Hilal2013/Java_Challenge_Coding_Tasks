@@ -10,7 +10,8 @@ public class Armstrong {
         checkArmstrong(number);
         scan.close();
 
-        System.out.println(isArmStrongNumber(153));
+        System.out.println(isArmStrongNumber(1634));
+
     }
 
     public static void checkArmstrong(int number) {
