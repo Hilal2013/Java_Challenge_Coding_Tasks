@@ -1,6 +1,6 @@
 package tasks.string_tasks;
 
-public class CovertStringToInteger {
+public class ConvertStringToInteger {
     public static void main(String[] args) {
         System.out.println(convertToInteger(""));
     }
