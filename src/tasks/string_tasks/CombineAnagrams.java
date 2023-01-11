@@ -6,15 +6,20 @@ public class CombineAnagrams {
     public static void main(String[] args) {
         //   List<String> list=new ArrayList<>(Arrays.asList("eat", "tea", "tam", "ate", "mat", "bat"));
         String[] arr = {"eat", "tea", "tam", "ate", "mat", "bat"};
+        List<char[]> list=new ArrayList<>();
         for (int i = 0; i < arr.length; i++) {
-       //    Arrays.sort(arr[i].toCharArray());
+        char[] each=   arr[i].toCharArray();
+            Arrays.sort(each);
             for (int j = i + 1; j < arr.length; j++) {
-                if (Arrays.equals(arr[i].toCharArray(),arr[j].toCharArray())){
-
+                char[] element  =arr[j].toCharArray();
+                Arrays.sort(element);
+                if (Arrays.equals(each, element) ){
+           list.add(each);
 
                }
             }
         }
+        System.out.println(list);
     }
 }
 /*
