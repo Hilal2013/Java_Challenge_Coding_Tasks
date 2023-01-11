@@ -7,12 +7,12 @@ public class CombineAnagrams {
         //   List<String> list=new ArrayList<>(Arrays.asList("eat", "tea", "tam", "ate", "mat", "bat"));
         String[] arr = {"eat", "tea", "tam", "ate", "mat", "bat"};
         for (int i = 0; i < arr.length; i++) {
-           Arrays.sort(arr[i].toCharArray());
+       //    Arrays.sort(arr[i].toCharArray());
             for (int j = i + 1; j < arr.length; j++) {
-               // if (Arrays.equals(Arrays.sort(arr[i].toCharArray()),Arrays.sort(arr[j].toCharArray()))) {
+                if (Arrays.equals(arr[i].toCharArray(),arr[j].toCharArray())){
 
 
-             //   }
+               }
             }
         }
     }
