@@ -28,3 +28,22 @@ int maxFrequency=0;
 
 }
 // write a program that finds the  highest number of times repeated word in a string.
+/*
+Map<String, Integer> unSortedMap = new LinkedHashMap<>();
+
+        for (String each : arr) {
+            int frequency = Collections.frequency(Arrays.asList(arr), each);
+            unSortedMap.put(each, frequency);
+        }
+
+        Map<String, Integer> reverseSortedMap = new LinkedHashMap<>();
+
+        unSortedMap.entrySet()
+                .stream()
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
+                .forEachOrdered(x -> reverseSortedMap.put(x.getKey(), x.getValue()));
+
+        System.out.println("Unsorted Map : " + unSortedMap);
+        System.out.println("Reverse (descending order) Sorted Map   : " + reverseSortedMap);
+
+ */
