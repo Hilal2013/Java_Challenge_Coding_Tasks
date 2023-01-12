@@ -5,29 +5,29 @@ import java.util.TreeSet;
 
 public class Anagram {
     public static void main(String[] args) {
-        System.out.println(checkSame("abc","cba"));
+        System.out.println(checkSame("abc","cca"));
         System.out.println(same("abc","def"));
     }
 //solution one
-public static boolean checkSame(String a, String b){
-   /*
-     if(a.length()==b.length()) {
-         for (int i = 0; i < a.length(); i++) {
-             char aEach=a.charAt(i);
-             char bEach=b.charAt(i);
-             if(aEach==bEach){
-                 return true;
-             }
-         }
-     }
-return false;
-*/
-//solution two
-    char[] ch1 = a.toCharArray();
-    char[] ch2 = b.toCharArray();
-
+public static boolean checkSame(String firstWord, String secondWord){
+//solution one
+    char[] ch1 = firstWord.toLowerCase().toCharArray(); // converts first word into lower case char array
+    char[] ch2 = secondWord.toLowerCase().toCharArray();
     Arrays.sort(ch1);
     Arrays.sort(ch2);
+    if(Arrays.equals(ch1,ch2)){
+        return true;
+    }
+    return false;
+}
+
+/*
+public static boolean same(String a, String b) {
+        char[] ch1 = a.toCharArray();
+        char[] ch2 = b.toCharArray();
+
+        Arrays.sort(ch1);
+        Arrays.sort(ch2);
     String a1 = "", a2 = "";
     for (char each : ch1) {
         a1 += each;
@@ -44,6 +44,8 @@ return false;
     }
 
 }
+
+ */
 //solution three
 public static boolean same(String a, String b){
 

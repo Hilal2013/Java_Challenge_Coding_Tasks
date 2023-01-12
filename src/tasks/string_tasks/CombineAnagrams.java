@@ -5,9 +5,10 @@ import java.util.*;
 public class CombineAnagrams {
     public static void main(String[] args) {
         //   List<String> list=new ArrayList<>(Arrays.asList("eat", "tea", "tam", "ate", "mat", "bat"));
-        String[] arr = {"eat", "tea", "tam", "ate", "mat", "bat"};
-        ArrayList<String> list = new ArrayList<>();
-        ArrayList<ArrayList<String>> innerList = new ArrayList<>();
+        String[] arr = {"eat", "tea", "tam", "ate", "mat", "bat","set"};
+        ArrayList<String> list1 = new ArrayList<>();
+        ArrayList<String> list2 = new ArrayList<>();
+        ArrayList<ArrayList<String>> nested = new ArrayList<>();
 
 
         for (int i = 0; i < arr.length; i++) {
@@ -16,14 +17,17 @@ public class CombineAnagrams {
             for (int j = 0; j < arr.length; j++) {
                 char[] element = arr[j].toCharArray();
                 Arrays.sort(element);
-                if (Arrays.equals(each, element) && !list.contains(arr[j])) {
-                    list.add(arr[j]);//[eat, tea, ate, tam, mat, bat]
+                if (Arrays.equals(each, element) && !list1.contains(arr[j])) {
+                    list1.add(arr[j]);//[eat, tea, ate, tam, mat, bat]
 
                 }
             }
-            innerList.add(i, list);
+
         }
-        System.out.println(innerList);
+        System.out.println(list1);
+        System.out.println(list2);
+        nested.addAll(Arrays.asList(list1,list2));
+        System.out.println(nested);
     }
 }
 /*
