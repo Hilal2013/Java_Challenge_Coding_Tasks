@@ -1,21 +1,29 @@
 package tasks.collection_tasks;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class FrequencyOfCharacter {
     public static void main(String[] args) {
-        frequencyTest( "apple");
+        frequencyOfCharacter( "apple");
 
 
     }
+    public static void frequencyOfCharacter(String str){
+        LinkedHashMap<String,Integer> map=new LinkedHashMap<>();
+        String[] arr=str.split("");
+        for (String each : arr) {
+            int frequency= Collections.frequency(Arrays.asList(arr),each);
+            map.put(each,frequency);
+        }
+        System.out.println(map);//{a=1, p=2, l=1, e=1}
+        String result="";
+        for (Map.Entry<String, Integer> eachPair : map.entrySet()) {
+            result+=eachPair.getKey()+eachPair.getValue();
+        }
+        System.out.println(result); //a1p2l1e1
 
-    public static void frequencyTest(String str){
-
-        Map<Character,Integer> map=new LinkedHashMap<>();
-
+/*
+Map<Character,Integer> map=new LinkedHashMap<>();
         for (Character each : str.toCharArray()) {
            // map.put(each, Collections.frequency(Arrays.asList(str.toCharArray()),each));
 
@@ -26,18 +34,8 @@ public class FrequencyOfCharacter {
             }
         }
         System.out.println(map);
-      /*
 
-        Map<String,Integer> map=new LinkedHashMap<>();
-
-        String[] chars = str.split("");
-        for (int i = 0; i < str.length(); i++) {
-            String eachChar = "" + str.charAt(i);
-            map.put(eachChar, Collections.frequency(Arrays.asList(chars), eachChar));
-        }
-
-       */
-
+ */
 
     }
 
