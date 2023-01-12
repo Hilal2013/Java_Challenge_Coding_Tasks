@@ -5,19 +5,44 @@ import java.util.Arrays;
 public class CountFrequencies {
 
     public static void main(String[] args) {
-       String[] chars={"a","a", "b","b","c","c","c"};
-        countFrequency(chars);
+       String[] chars={"a","a", "b","b","c","c","c","d"};
+        System.out.println(countFrequency(chars));//7
     }
 
-    public static void countFrequency(String[] chars) {
+    public static int countFrequency(String[] chars) {
+String result ="";
+        for (int i = 0; i < chars.length ; i++) {
+            int frequency=0;
+            for (int j = 0; j <chars.length; j++) {
+                if(chars[j].equals(chars[i])){
+                    frequency++;
+                }
+            }
+            if(frequency==1){
+                result+=chars[i];
+                continue;
+            }else{
+                if(result.contains(chars[i])){
+                    continue;
+                }else{
+                    result+=chars[i]+""+frequency;
+                }
+            }
+        }
+        System.out.println(result);//a2b2c3d
+        int count= result.split("").length;
+        return count;
+    }
+
+    public static void countFreq(String[] arr) {
 
         String str = "";
 
-        for (String each : chars) {
+        for (String each : arr) {
             if (!str.contains(each)) {
                 int count = 0;
 
-                for (String element : chars) {
+                for (String element : arr) {
                     if (each.equals(element)) {
                         count++;
                     }
