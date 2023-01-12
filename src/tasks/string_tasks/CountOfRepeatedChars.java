@@ -6,7 +6,7 @@ public class CountOfRepeatedChars {
 
 
     }
-
+//solution one
     public static String countReapetedChars(String str) {
         String result = "";
 
@@ -25,6 +25,27 @@ public class CountOfRepeatedChars {
         }
         return result;
     }
+    //solution two
+    public static String solution(String str){
+        String result = "";
+        int count = 0;
+        char temp = str.charAt(0);
+
+        for (char c : str.toCharArray()) {
+            if(temp == c) {
+                count++;
+            } else {
+                result +=  ""+temp + count;
+                temp = c;
+                count = 1;
+            }
+        }
+        result += ""+temp + count;
+
+        return result;
+    }
+
+
 
 }
 /*
