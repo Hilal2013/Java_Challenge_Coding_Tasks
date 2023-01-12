@@ -23,17 +23,17 @@ public class DivisibleBy_ArrayList {
         method();
         System.out.print("Divisible By 15:");
         for (Integer each : divisibleBy15) {
-            System.out.print(" " + each);
+            System.out.print(" " + each);//Divisible By 15: 15 30
         }
         System.out.println();
         System.out.print("Divisible By 5:");
         for (Integer each : divisibleBy5) {
-            System.out.print(" " + each);
+            System.out.print(" " + each);//Divisible By 5: 5 10 20 25
         }
         System.out.println();
         System.out.print("Divisible By 3:");
         for (Integer each : divisibleBy3) {
-            System.out.print(" " + each);
+            System.out.print(" " + each);//Divisible By 3: 3 6 9 12 18 21 24 27
         }
     }
 }
