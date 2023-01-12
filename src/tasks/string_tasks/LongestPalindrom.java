@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class LongestPalindrom {
 
     public static void main(String[] args) {
-        System.out.println(longestPalindrome("level noon Aibohphobia madam racecar"));
+        System.out.println(longestPalindrome("level noon Aibohphobia madam racecar ffrocionussffdd"));
 
       // System.out.println(checkPalindrom("level"));
 
