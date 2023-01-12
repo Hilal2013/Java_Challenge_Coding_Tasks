@@ -8,7 +8,7 @@ public class CountFrequencies {
        String[] chars={"a","a", "b","b","c","c","c","d"};
         System.out.println(countFrequency(chars));//7
     }
-
+//solution one
     public static int countFrequency(String[] chars) {
 String result ="";
         for (int i = 0; i < chars.length ; i++) {
@@ -33,7 +33,7 @@ String result ="";
         int count= result.split("").length;
         return count;
     }
-
+//solution two
     public static void countFreq(String[] arr) {
 
         String str = "";
