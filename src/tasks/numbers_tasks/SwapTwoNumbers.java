@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class SwapTwoNumbers {
     public static void main(String[] args) {
 
-        swapInteger(10, 20);
-swapString("Mary","John");
-swapChar('A','B');
+        swapInteger(10, 20);//x=20 y=10
+swapString("Mary","John");//FirstString=John SecondString=Mary
+swapChar('A','B');//x=B y=A
     }
     public static void swapInteger(int x, int y) {
         x += y;//x=x+y//x=10+20=30
@@ -18,6 +18,11 @@ swapChar('A','B');
     }
 
     public static void swapString(String firstString, String secondString) {
+        int firstLength=firstString.length();
+    //    int secondlength=secondString.length();
+        firstString=firstString+""+secondString;//MaryJohn
+        secondString=firstString.substring(0,firstLength);//Mary
+        firstString=firstString.substring(firstLength);
 
         System.out.println("FirstString=" + firstString + " SecondString=" + secondString);
 
@@ -34,21 +39,3 @@ swapChar('A','B');
 
 }
 
-/*
-  String a = "sasha";
-        String b = "eshwa";
-
-        int aL = a.length();//5
-
-        System.out.println(a + "  " + b);
-
-        a = a + b; // a = "sashaeashwa"
-        b = a.substring(0,aL);// b = "sasha"
-        //  "sashaeshwa"
-        a = a.substring(aL);// a = "eashwa"
-        //   "sashaeshwa"
-
-        System.out.println(a + "  " + b);
-
-
- */
