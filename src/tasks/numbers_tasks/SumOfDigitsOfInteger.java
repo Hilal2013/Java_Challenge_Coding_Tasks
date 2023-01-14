@@ -7,9 +7,9 @@ public class SumOfDigitsOfInteger {
     }
     public static int sumOfDigits(int number) {
         int sum = 0;
-        while(number>0){
-            sum += (number % 10);
-            number /= 10;
+        while(number>0){//123//number=12 number =1//false
+            sum += (number % 10);//remainder=3 sum=3 //remainder=2 sum=5//remainder=1 sum=6
+            number /= 10;//123/10=12//12/10=1//number=1/10
         }
 
 
