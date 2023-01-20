@@ -35,4 +35,11 @@ input:numbers = {1 , 2, 100, 7, 11, 15, 999 };
  output: [1, 3]
 find the sum of 2 integer values equal
 to 9 and return there indexes
+TARGET 9 TASK
+
+ input:numbers = {1 , 2, 100, 7, 11, 15, 999 };
+ target = 9
+ output: [1, 3]
+
+Find the sum of 2 integer values equal to target (9) and return their indexes.
  */
