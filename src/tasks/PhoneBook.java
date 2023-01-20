@@ -33,17 +33,5 @@ int last=scan.nextInt();
     }
 }
 /*
- while(scan.hasNext())
-        {
-            String name = scan.next();  // to enter key to fetch a specific value
-            if(phonebook.containsKey(name)== true)
-            {
-                System.out.println(name  + "=" +phonebook.get(name));
 
-            }else
-            {
-                System.out.println("Not found");
-            }
-
-        }
  */
