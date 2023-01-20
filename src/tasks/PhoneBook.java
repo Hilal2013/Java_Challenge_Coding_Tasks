@@ -8,30 +8,32 @@ public class PhoneBook {
         // to get names and numbers
         Scanner scan=new Scanner(System.in);//I want get them as I wanted //so create loop
 int last=scan.nextInt();
-        Map<String,Long> phonebook = new java.util.HashMap<>();
+        Map<String,Long> phoneBook = new java.util.HashMap<>();
         for(int i = 0; i < last; i++){
+           scan.nextLine();
             String name = scan.nextLine();// to get names=> keys for map
-         //  scan.nextLine();
             long phoneNumber = scan.nextLong();// to get numbers => values for map
-          //  scan.nextLine();
-            phonebook.put(name,phoneNumber);
+            phoneBook.put(name,phoneNumber);
         }
-    //    scan.nextLine();
-        System.out.println(phonebook);
-        // if phonebook contains same name which is given from keybord// and it will continiue so while loop
-        while(true){
+        System.out.println(phoneBook);
+        scan.nextLine();
+
+        while(true){//it will continiue so we will use while loop
             String name1=scan.nextLine();
-            if(phonebook.containsKey(name1)){
-                System.out.println(name1  + "=" +phonebook.get(name1));
+            if(phoneBook.containsKey(name1)){// if phonebook contains same name which is given from keybord
+                System.out.println(name1  + "=" +phoneBook.get(name1));
             }else{
                 System.out.println("Not found");
             }
         }
 
-//scan.close();
+//scan.close();?
 
     }
 }
 /*
-
+scan.nextLine;
+if we have another scanner method(next(),nextInt,nextLong)..) except nexLine()
+  we have to give extra nextLine to clean the scanner memory
+             before the nextLine()
  */
