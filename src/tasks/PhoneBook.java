@@ -28,7 +28,7 @@ int last=scan.nextInt();
             }
         }
 
-
+//scan.close();
 
     }
 }
