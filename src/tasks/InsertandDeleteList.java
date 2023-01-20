@@ -19,8 +19,8 @@ public class InsertandDeleteList {
        int turn=scan.nextInt();
         for (int i = 0; i <turn ; i++) {
             System.out.println("Please enter what do you want?");
-            String op=scan.next().toLowerCase();
-            if(op.equals("insert")){
+            String operator=scan.next().toLowerCase();
+            if(operator.equals("insert")){
                 System.out.println("to which index will you insert?");
                 int index= scan.nextInt();
                 System.out.println("What number do you want to insert?");
@@ -28,20 +28,20 @@ public class InsertandDeleteList {
                 if(list.size()<=index){
                     list.add(insert);
                 }else{
-                    for (int j = 0; i < list.size(); j++) {
-                        if (list.get(j)==index){
-                            list.add( i- 1,insert);
+                    for (int j = 0; j < list.size(); j++) {
+                        if (j==index){
+                            list.add( j,insert);
                             continue;
                         }
                     }
                 }
             }
-            if(op.equals("Delete")){
+            if(operator.equals("delete")){
                 System.out.println("which index will you delete?");
                 int index= scan.nextInt();
-                for (int j = 0; i < list.size(); j++) {
-                    if (list.get(j)==index){
-                        list.remove(index);
+                for (int j = 0; j < list.size(); j++) {
+                    if (j==index){
+                        list.remove(j);
                         continue;
                     }
 
