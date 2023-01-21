@@ -5,25 +5,24 @@ import java.util.Scanner;
 
 public class PhoneBook {
     public static void main(String[] args) {
-        // to get names and numbers
-        Scanner scan = new Scanner(System.in);//I want get them as I wanted //so create loop
+        Scanner scan = new Scanner(System.in);
         int last = scan.nextInt();
-        Map<String, Long> phoneBook = new java.util.HashMap<>();
-        for (int i = 0; i < last; i++) {
+        Map<String, Long> phoneBook = new java.util.HashMap<>(); //first create a phone book through map.
+        //I want get names and phone numbers as I wanted //so create loop
+        for (int i = 0; i < last; i++) { //Loop will continue given last number
             scan.nextLine();
             String name = scan.nextLine();// to get names=> keys for map
             long phoneNumber = scan.nextLong();// to get numbers => values for map
-            if ((phoneNumber + "").length() == 8 && !(phoneNumber + "").substring(0, 1).equals("0")) {
-                phoneBook.put(name.toLowerCase(), phoneNumber);
+            if ((phoneNumber + "").length() == 8 && !(phoneNumber + "").substring(0, 1).equals("0")) {//conditions forphonenumber
+                phoneBook.put(name.toLowerCase(), phoneNumber);//add your phonebook
             } else {
                 System.out.println("Your phone number is not valid");
-
             }
-
         }
             System.out.println(phoneBook);
             scan.nextLine();
-            while (true) {//it will continue so we will use while loop
+            while (true) {//As long as we want to find name and phone numbers inside the phone book it will continue
+                // so we will use while loop
                 String name1 = scan.nextLine();
                 if (phoneBook.containsKey(name1)) {// if phonebook contains same name which is given from keybord
                     System.out.println(name1 + "=" + phoneBook.get(name1));
@@ -31,11 +30,8 @@ public class PhoneBook {
                     System.out.println("Not found");
                 }
             }
-
 //scan.close();?
-
         }
-
 }
 /*
 scan.nextLine;
