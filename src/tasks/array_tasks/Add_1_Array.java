@@ -18,6 +18,7 @@ public class Add_1_Array {
         int num= Integer.parseInt(str)+1;//convert string to int and add 1
         String[] arr1=(String.valueOf(num)).split("");//now again array
         System.out.println(Arrays.toString(arr1));
+        //
     }
 
 }
