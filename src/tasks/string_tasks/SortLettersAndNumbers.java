@@ -6,7 +6,7 @@ public class SortLettersAndNumbers {
     public static void main(String[] args) {
 
         String str = "DC501GCCCA098911";
-        sortLettersAndNumbers(str);//CD015ACCCG01899
+        sortLettersAndNumbers(str);//CD015ACCCG011899
 
     }
 
@@ -21,14 +21,22 @@ public class SortLettersAndNumbers {
                 result += ",";//if there is digit after letter add comma
 
             } else if (Character.isDigit(arr[i]) && Character.isLetter(arr[i + 1])) {
-
                 result += ",";////if there is letter after digit add comma
+
+            }
+
+        }
+        System.out.println(result);//DC,501,GCCCA,098911 //missing the last character//create loop and add last chracter to result
+        for (int i = 0; i < arr.length; i++) {
+            if (i == arr.length-1) {
+                result+=""+arr[arr.length-1];
             }
         }
-        System.out.println(result);//DC,501,GCCCA,09891
+
+        System.out.println(result);//DC,501,GCCCA,098911
         //for sort im gonna create array through split
         String[] arr1 = result.split(",");
-        System.out.println(Arrays.toString(arr1));//[DC, 501, GCCCA, 09891]
+        System.out.println(Arrays.toString(arr1));//[DC, 501, GCCCA, 098911]
         String resultSort = "";
         for (int i = 0; i < arr1.length; i++) {//to access every index
             for (int j = 0; j < arr1[i].length(); j++) {//to access element for each index
@@ -38,7 +46,7 @@ public class SortLettersAndNumbers {
                 resultSort += arr2[j];//CD
             }
         }
-        System.out.println(resultSort);//CD015ACCCG01899
+        System.out.println(resultSort);//CD015ACCCG011899
 
     }
 
