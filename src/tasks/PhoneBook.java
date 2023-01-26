@@ -35,7 +35,8 @@ public class PhoneBook {
 }
 /*
 scan.nextLine;
+
 if we have another scanner method(next(),nextInt,nextLong)..) except nexLine()
   we have to give extra nextLine to clean the scanner memory
-             before the nextLine()
+             before the nextLine
  */

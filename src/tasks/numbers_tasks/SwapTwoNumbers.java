@@ -12,7 +12,7 @@ public class SwapTwoNumbers {
 
     public static void swap(int num1, int num2) {//by declaring temporary value
         int temp;
-        //first im gonna assign temp to num1
+        //first im gonna assign num1 to temp
         temp = num1; // if x is 10 temp will be 10
         //second im gonna assign num2 to num1
         num1 = num2;// num1 will be 20
