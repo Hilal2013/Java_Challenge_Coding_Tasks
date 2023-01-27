@@ -1,5 +1,7 @@
 package tasks.string_tasks;
 
+import java.util.Arrays;
+
 public class SumOfAllIntegers {
     public static void main(String[] args) {
 
@@ -7,13 +9,30 @@ public class SumOfAllIntegers {
 
     }
     public static int sumOfIntegers(String str){
-        int sum = 0;
-        String[] arr = str.split(" ");
 
-
-        for (String each : arr) {
+String result="";
+        for (int i = 0; i < str.length()-1; i++) {
+            char ch=str.charAt(i);char ch1=str.charAt(i+1);
+            if(Character.isDigit(ch)&&Character.isDigit(ch1)){
+                result+=ch+""+ch1+",";
+            }else if(Character.isWhitespace(ch)&&Character.isDigit(ch1)){
+                result+=ch1+",";
+            }else{
+                continue;
+            }
 
         }
+        System.out.println(result);//12,3,7,
+       result= result.substring(0,result.lastIndexOf(','));//remove last comma//
+        System.out.println(result);//12,3,7
+        int sum = 0;
+        String[] arr = result.split(",");
+        System.out.println(Arrays.toString(arr));//[12, 3, 7]
+
+        for (String each : arr) {
+            sum+=Integer.parseInt(each);
+        }
+
         return sum;
     }
 

@@ -9,11 +9,11 @@ public class PassWordValidation {
     }
     public static boolean passwordIsValid(String password){
 
-        boolean length = password.length() >= 8 && !password.contains(" ");
-        boolean hasUpperCase = false;  // has Upper case letter
-        boolean hasLowerCase = false;  // has lower case letter
-        boolean hasDigit = false;  // has Digit
-        boolean hasSpecialChars = false; // has Special Character
+        boolean length = password.length() >= 6 && !password.contains(" ");
+        boolean hasUpperCase = false;
+        boolean hasLowerCase = false;
+        boolean hasDigit = false;
+        boolean hasSpecialChars = false;
 
         for (char each : password.toCharArray()) {
 
