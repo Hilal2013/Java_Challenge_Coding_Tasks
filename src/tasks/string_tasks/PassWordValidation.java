@@ -3,7 +3,7 @@ package tasks.string_tasks;
 public class PassWordValidation {
 
     public static void main(String[] args) {
-        System.out.println(passwordIsValid("AbDzk2fC$"));
+        System.out.println(passwordIsValid("AbDzk2fC"));
 
 
     }
@@ -26,7 +26,8 @@ public class PassWordValidation {
             }
             if(Character.isDigit(each)){
                 hasDigit = true;
-            }else{
+            }
+            if(!Character.isDigit(each)&&!Character.isLetter(each)){
                 hasSpecialChars = true;
             }
 
