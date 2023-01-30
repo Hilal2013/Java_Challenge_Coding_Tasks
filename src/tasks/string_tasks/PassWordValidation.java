@@ -9,16 +9,17 @@ public class PassWordValidation {
     }
     public static boolean passwordIsValid(String password){
 
-        boolean length = password.length() >= 6 && !password.contains(" ");
-        boolean hasUpperCase = false;
+        boolean length = password.length() >= 6 && !password.contains(" ");//return true
+        boolean hasUpperCase = false;//default
         boolean hasLowerCase = false;
         boolean hasDigit = false;
         boolean hasSpecialChars = false;
-
-        for (char each : password.toCharArray()) {
+//create charArray from string
+        char[] arr=password.toCharArray();
+        for (char each: arr) {// to access every each character
 
             if(Character.isUpperCase(each)){
-                hasUpperCase = true;
+                hasUpperCase = true;//reassign
             }
             if(Character.isLowerCase(each)){
                 hasLowerCase = true;
