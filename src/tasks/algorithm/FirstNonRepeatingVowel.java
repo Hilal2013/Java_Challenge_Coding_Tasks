@@ -11,7 +11,7 @@ public class FirstNonRepeatingVowel {
     public static int findFirstNonRepeatVowel(String str){
     int index=0;
 
-        str=str.toLowerCase();
+      //  str=str.toLowerCase();
         for (int i = 0; i < str.length(); i++) {// to access every character for loop//check and compare nested loop
             int frequency=0;
             for (int j = 0; j < str.length(); j++) {

@@ -6,7 +6,7 @@ public class Fibonacci {
         int previousNumber=0;
         int nextNumber=1;
 //1 1 2 3 5 8 13
-        for (int i = previousNumber,k=nextNumber; i<100 ;i++,k++) {
+        for (int i = previousNumber,k=nextNumber; i<20 ;i++,k++) {
             sum=previousNumber+nextNumber;//0+1=1 //1+1=2// 1+2//2+3//3+5
             previousNumber=nextNumber;//1//1//2//3//5
             nextNumber=sum;//next number=1//2//3//5//8

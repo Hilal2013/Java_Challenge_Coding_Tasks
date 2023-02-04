@@ -1,4 +1,4 @@
-package tasks.string_tasks;
+package tasks.collection_tasks;
 
 import java.util.*;
 
@@ -12,7 +12,7 @@ public class CombineAnagrams {
         for (String each : str) {
             map.put(each,new ArrayList<>(Arrays.asList(str)));
         }
-        //    System.out.println(map);
+           System.out.println(map);
 //I created checkSame()method //first iterate map how entrySet()method
         for (Map.Entry<String, ArrayList<String>> eachPair : map.entrySet()) {
             String eachKey=eachPair.getKey();
