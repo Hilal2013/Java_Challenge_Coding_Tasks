@@ -41,7 +41,13 @@ boolean hasSpace_HyphenDish=dishName.charAt(0)!=' '&& dishName.charAt(0)!='_'
 return firstAndLastLetters && nameLength && hasSpace_HyphenAnimal && hasSpace_HyphenDish
         &&hasDigitAnimal && hasDigitDish && hasLowerCaseAnimal && hasLowerCaseDish ;
    }
+    public static boolean checkName2(String animal, String dish){
 
+        return animal.charAt(0) == dish.charAt(0)
+                && animal.charAt(animal.length()-1) == dish.charAt(dish.length()-1);
+
+
+    }
 
 }
 /*
