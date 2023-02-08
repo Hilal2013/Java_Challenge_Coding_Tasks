@@ -13,11 +13,11 @@ public class FirstNonRepeatingVowel {
 
       //  str=str.toLowerCase();
         for (int i = 0; i < str.length(); i++) {// to access every character for loop//check and compare nested loop
-            int frequency=0;
+            int frequency=0;//first iteration will be 'g'//inner loop
             for (int j = 0; j < str.length(); j++) {
                 if(str.charAt(i)==str.charAt(j)){
                     if(checkVowel(str.charAt(i))){//created checkvowel method at the bottom
-                        frequency++;//if character is vowel count frequency
+                        frequency++;//if character is vowel  frequency will increase
                     }
                 }
             }
