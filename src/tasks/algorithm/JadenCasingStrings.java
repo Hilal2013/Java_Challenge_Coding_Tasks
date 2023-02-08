@@ -18,7 +18,7 @@ convertCapitalFirstLetters(str);
         for (int i = 0; i < arr.length; i++) {
         result+= arr[i].substring(0,1).toUpperCase()+arr[i].substring(1)+" ";
         }
-        System.out.println(result.substring(0, result.lastIndexOf(" ")));
+        System.out.println(result.trim());
 //second solution
         Arrays.stream(arr)
                 .map(i->i.substring(0,1).toUpperCase()+i.substring(1)+" ")
