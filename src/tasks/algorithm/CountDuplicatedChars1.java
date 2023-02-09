@@ -2,68 +2,66 @@ package tasks.algorithm;
 
 public class CountDuplicatedChars1 {
     public static void main(String[] args) {
-        String word="aabb";
-countDuplicatedChars(word);
+        String word = "indisis";
+        countDuplicatedChars(word);
     }
 
 
+    private static void countDuplicatedChars(String word) {
 
-private static void countDuplicatedChars(String word){
+        String result ="";
+        int count = 0;
+        word = word.toLowerCase();
+        for (int i = 0; i < word.length(); i++) {
+            char each = word.charAt(i);
+            int frequency = 0;
+            for (int j = 0; j < word.length(); j++) {
+                if (word.charAt(j) == each) {
+                    frequency++;
+                }
+            }
+            if (frequency > 1) {
+                if (result.contains(each+"")) {
+                    continue;
+                } else {
+                   result+=each+"";
+                    count++;
+                }
 
-String[] arr=word.split("");
-String result="";
-int count=0;
-    for (int i = 0; i < arr.length; i++) {
-        int frequency=0;
-        for (int j = 0; j < arr.length; j++) {
-            if(arr[i].equalsIgnoreCase(arr[j])){
-                frequency++;
             }
         }
-        if(frequency>1) {
-            if(result.contains(arr[i].toLowerCase())){
-            continue;
-        }else{
-            count++;
-            result+="'"+arr[i]+"' occurs "+convertNumber(frequency);
-result=result.trim();
-        }
-
-        }else if(frequency==0){
-    //        result="no characters repeats more than once";
-        }
+        System.out.println(count+" # "+result);
     }
-    System.out.println(count);
-}
+
     public static String convertNumber(int num) {
-        String result="";
+        String result = "";
         switch (num) {
             case 1:
-               result="once";
-               break;
+                result = "once";
+                break;
             case 2:
-                result="twice ";
+                result = "twice";
                 break;
             case 3:
-                result="and three times ";
+                result = "and three times ";
                 break;
             case 4:
-                result="and four times ";
+                result = "and four times ";
                 break;
             case 5:
-                result="and five times ";
+                result = "and five times ";
                 break;
             case 6:
-                result="and six times ";
+                result = "and six times ";
                 break;
             case 7:
-                result="and seven times";
+                result = "and seven times";
                 break;
             case 8:
-                result="and eight times";
+                result = "and eight times";
                 break;
             case 9:
-                result="and nine times";
+                result = "and nine times";
                 break;
 
         }
@@ -87,7 +85,8 @@ Example:
 "aA11" -> 2 # 'a' and '1'
 "ABBA" -> 2 # 'A' and 'B' each occur twice.
         String word="Indivisibilities";
-
+ result += " '" + each + "' occurs " + convertNumber(frequency);
+                    result = result.trim();
 
 
 

@@ -24,7 +24,7 @@ public class CountDuplicatedChars {
                 if (result.contains("" + each)) {
                     continue;
                 }
-                result += each;
+                result += each+"";
                 count++;
             }
         }
