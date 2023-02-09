@@ -20,6 +20,7 @@ public static int countUnique(String str){
             }
         }
         if(frequency==1){
+
             count++;
         }
     }
