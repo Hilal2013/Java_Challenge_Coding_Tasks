@@ -2,7 +2,7 @@ package tasks.algorithm;
 
 public class CountDuplicatedChars {
     public static void main(String[] args) {
-        String word = "aAcdefaefF";
+        String word = "aAcdefaefF";//3
         System.out.println(countDuplicatedChars(word));
 
 
