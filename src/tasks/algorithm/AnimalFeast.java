@@ -48,7 +48,15 @@ return firstAndLastLetters && nameLength && hasSpace_HyphenAnimal && hasSpace_Hy
 
 
     }
+    //second solution
+    public static boolean isEligible(String animal, String dish) {
+        return animal.charAt(0) == dish.charAt(0) &&
+                animal.charAt(animal.length() - 1) == dish.charAt(dish.length() - 1);
+    }
 
+    public static boolean isEligible2(String animal, String dish){
+        return (animal.charAt(0) +""+ animal.charAt(animal.length() - 1)) 		.equals(dish.charAt(0)+""+dish.charAt(dish.length() - 1));
+    }
 }
 /*
 All the animals are having a feast! Each animal is bringing one dish. There is just one rule: the
