@@ -26,6 +26,33 @@ convertCapitalFirstLetters(str);
 
 
     }
+    //second solution
+    public String toJadenCase(String phrase) {
+        if (phrase == null || phrase.isEmpty()) {
+            return "";
+        }
+        String result ="";
+        String [] strings = phrase.split(" ");
+        for (String str : strings){
+            result += (str.charAt(0) + "") .toUpperCase() + str.substring(1) + " ";
+        }
+        return result.trim();
+    }
+    //third solution
+    public String toJadenCase2(String phrase) {
+        if (phrase == null || phrase.isEmpty()) {
+            return "";
+        }
+
+        char[] array = phrase.toCharArray();
+
+        for(int i = 0; i < array.length; i++) {
+            if(i == 0 || array[i-1] == ' ') {
+                array[i] = Character.toUpperCase(array[i]);
+            }
+        }
+        return new String(array);
+    }
 
 }
 /*
