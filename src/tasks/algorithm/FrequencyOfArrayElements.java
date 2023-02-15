@@ -31,16 +31,11 @@ public class FrequencyOfArrayElements {
         //second solution
 
     }
-  //  public static  Map<String, Integer> findFrequencyElement(String[] arr) {
-      //  Map<String,Integer> map= Arrays.stream(arr)
-          //      .collect(Collectors.toMap(arr[]));
+ //  public static  Map<String, Integer> findFrequencyElement(String[] arr) {
+    //   Map<String,Integer> map= Arrays.stream(arr)
+       //        .collect(Collectors.toMap(each->each,Arrays.stream(arr).filter(each->each.equals(each)).count()));
 
-                //.filter(i->i.equals(i))
-               // .count()
-
-
-
-  //  }
+  // }
 
 
 }
