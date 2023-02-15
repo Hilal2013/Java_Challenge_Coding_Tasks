@@ -7,7 +7,7 @@ public class frequencyOfEachElement {
     public static void main(String[] args) {
        String[] arr1 = {"Apple","Banana","Apple","Cherry"};
        Integer[] arr2={12,34,12,-1,-1,12};
-        findFrequencyOfEachElement(arr2);
+        findFrequencyOfEachElement(arr1);
 
     }
    public static <T> void findFrequencyOfEachElement(T[] arr){
