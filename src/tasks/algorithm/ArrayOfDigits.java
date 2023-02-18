@@ -20,3 +20,7 @@ public class ArrayOfDigits {
     }
 // arr.length= n=> time complexity O(n)
 }
+/*
+How to convert a positive int to an array of digits.
+Input: 490 Output: [4, 9, 0] (as int Array)
+ */
