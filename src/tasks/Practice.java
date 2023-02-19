@@ -8,6 +8,8 @@ import java.util.List;
 
 public class Practice {
     public static void main(String[] args) {
+        String str="eloquent";
+        System.out.println(removeFirstAndLastChar(str));
         String [] arr = { "Hi", "How", "Are", "You"};
         List<String> arrList = new ArrayList<>(Arrays.asList(arr));
         if(arrList.removeIf(s -> { System.out.print(s); return s.length() <=2;} )) {
@@ -29,6 +31,13 @@ public class Practice {
 
             return a.multiply(b);
         }
+        public static String removeFirstAndLastChar(String str){
+
+       return str.substring(1,str.length()-1);
+
+
+        }
+
 
 }
 
