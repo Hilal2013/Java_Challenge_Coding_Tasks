@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SumUpTo0 {
     public static void main(String[] args) {
-       int N=7; //for example=> it will print  4 unique numbers// N should be (1 < N < 100)
+       int N=4; //for example=> it will print  4 unique numbers// N should be (1 < N < 100)
         //we will use  symmetric pairs(-x,+x) to get sum=0 forexample (2,-2,5,-5)
         //if N is odd we will add"0"
 findArraySumUpTo0(N);
