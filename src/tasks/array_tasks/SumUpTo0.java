@@ -1,10 +1,11 @@
 package tasks.array_tasks;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SumUpTo0 {
     public static void main(String[] args) {
-       int N=4; //for example=> it will print  4 unique numbers// N should be (1 < N < 100)
+       int N=5; //for example=> it will print  4 unique numbers// N should be (1 < N < 100)
         //we will use  symmetric pairs(-x,+x) to get sum=0 forexample (2,-2,5,-5)
         //if N is odd we will add"0"
 findArraySumUpTo0(N);
@@ -51,8 +52,32 @@ public static int[] sumZero(int N) {
     }
     return arr;
 }
+//solution three
+    public static int[] sumZero1(int N) {
 
+        ArrayList<Integer> result = new ArrayList(N);
 
+        if (N % 2 == 0) {
+            for (int i = 1; i <= N / 2; i++) {
+                result.add(i);
+                result.add(-i);
+            }
+        } else {
+
+            result.add(0);
+            for (int i = 1; i <= N / 2; i++) {
+                result.add(i);
+                result.add(-i);
+            }
+        }
+
+        int[] arr = new int[result.size()];
+        for (int i = 0; i < result.size(); i++) {
+            arr[i] = result.get(i);
+        }
+
+        return arr;
+    }
 }
  /*
     Write a function:
