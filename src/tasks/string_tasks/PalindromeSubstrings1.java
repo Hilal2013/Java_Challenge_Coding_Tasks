@@ -39,15 +39,13 @@ return result;
 
     public static boolean checkPalindrom(String word){
         String reversed="";
-        for (int i = 0; i <word.length() ; i++) {
-            for (int j = word.length()-1; j>=0 ; j--) {
-                reversed+=word.charAt(j);
+            for (int i = word.length()-1; i>=0 ; i--) {
+                reversed+=word.charAt(i);
                 if(word.equalsIgnoreCase(reversed)){
                     return true;
                 }
-
             }
-        }
+
         return false;
     }
 
