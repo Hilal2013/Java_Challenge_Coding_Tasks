@@ -19,7 +19,7 @@ public class ValidAnagram {
             return true;
         }
         return false;
-
+//time complexity O(n(log n))
     }
     //solution two
     public static boolean checkAnagramWithSet(String s, String t) {
@@ -34,7 +34,7 @@ public class ValidAnagram {
         }
     }
 
-
+//time complexity O(n(log n))
 }
 /*
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.

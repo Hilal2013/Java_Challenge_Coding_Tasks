@@ -20,6 +20,7 @@ public class ValidPalindrome {
        return    result.equalsIgnoreCase(new StringBuilder(result).reverse().toString());
 
         }
+
 }
 /*
 Write a function that accepts a string and determines whether it is a palindrome, ignoring nonalphanumeric characters and case and returns true if it is palindrome.
