@@ -11,7 +11,7 @@ public class ValidPalindrome {
         char[] ch = sentence.toCharArray();
         String result="";
         for (int i = 0; i < ch.length; i++) {
-            if (Character.isLetter(ch[i])) {
+            if (Character.isLetter(ch[i])|| Character.isDigit(ch[i])) {
                 result += ch[i];
             }
         }
