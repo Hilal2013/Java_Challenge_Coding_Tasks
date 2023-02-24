@@ -8,7 +8,11 @@ public class ValidPalindrome {
     }
 
     public static boolean checkPalindrome(String sentence) {
-        char[] ch = sentence.toCharArray();
+        if (sentence == null || sentence.isBlank()) {
+            return true;
+        }
+
+        char[] ch = sentence.toLowerCase().toCharArray();
         String result="";
         for (int i = 0; i < ch.length; i++) {
             if (Character.isLetter(ch[i])|| Character.isDigit(ch[i])) {
