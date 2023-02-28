@@ -6,10 +6,10 @@ import java.util.Map;
 
 public class SumOfTwoNumbersTarget {
     public static void main(String[] args) {
-        int[] nums = {2, 7, 11, 15};//[0,1]
-        int target = 9;
+        int[] nums = {16, 3, 11,5,15};
+        int target = 8;
         int[] result = findSumOfTwoNumbersTarget(nums, target);
-        System.out.println(Arrays.toString(result));//[0, 1]
+        System.out.println(Arrays.toString(result));//[3, 5]
         int[] result2 = findTwoSum(nums, target);
         System.out.println(Arrays.toString(result2));//[0, 1]
 
@@ -21,15 +21,14 @@ public class SumOfTwoNumbersTarget {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
-                    // arr[0]=i;  arr[1]=j;
-                    arr = new int[]{i, j};
 
+                    arr = new int[]{nums[i], nums[j]};
+// arr = new int[]{i,j};//if we want index numbers
                 }
             }
         }
         return arr;
-//What is the time complexity of your solution?
-        //nums.length=n    (c0+c1)*n*n remove constant-> time complexity=>  O(n^2)
+//What is the time complexity  O(n^2)
     }
 
     //second solution for better time complexity
@@ -48,10 +47,9 @@ public class SumOfTwoNumbersTarget {
                 map.put(nums[i], i);//add element and index
             }
         }
-        System.out.println(map);//{2=0, 11=2, 15=3}
+        System.out.println(map);//{{16=0, 3=1, 11=2, 15=4}
         return arr;
-//2. What is the time complexity of your solution?
-        //nums.length=n    (c0+c1+c2)*n remove constant-> time complexity=>  O(n)
+// What is the time complexity  O(n)
 
     }
 
