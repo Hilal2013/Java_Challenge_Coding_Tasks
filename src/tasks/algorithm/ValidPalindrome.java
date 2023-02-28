@@ -2,28 +2,72 @@ package tasks.algorithm;
 
 public class ValidPalindrome {
     public static void main(String[] args) {
-        String sentence="Do geese see God?";
-        System.out.println(checkPalindrome(sentence));
-
+        String str="Do geese see God?";
+        System.out.println(checkPalindrome(str));
+        System.out.println(twoPointerStrBuilder(str));
+        System.out.println(twoPointerRegex(str));
     }
 
-    public static boolean checkPalindrome(String sentence) {
-        if (sentence == null || sentence.isBlank()) {
+    public static boolean checkPalindrome(String str) {
+        if (str == null || str.isBlank()) {
             return true;
         }
 
-        char[] ch = sentence.toLowerCase().toCharArray();
-        String result="";
-        for (int i = 0; i < ch.length; i++) {
-            if (Character.isLetter(ch[i])|| Character.isDigit(ch[i])) {
-                result += ch[i];
+        str = str.toLowerCase(); // O(n)
+        StringBuilder sb = new StringBuilder();//for memory
+        for (int i = 0; i < str.length(); i++) { // O(n)
+            if (Character.isLetterOrDigit(str.charAt(i))) {
+                sb.append(str.charAt(i));
             }
         }
-            System.out.println(result);//DogeeseseeGod
+        String filtered = sb.toString();
+        String reversed = sb.reverse().toString();
+        return filtered.equals(reversed);
 
-       return    result.equalsIgnoreCase(new StringBuilder(result).reverse().toString());
-
+    }
+    //O(n) Time
+    //O(n) Space
+    public static boolean twoPointerStrBuilder(String str){
+        if (str == null || str.isBlank()) {
+            return true;
         }
+
+        str = str.toLowerCase(); // O(n)
+        StringBuilder sb = new StringBuilder();//for memory
+        for (int i = 0; i < str.length(); i++) { // O(n)
+            if (Character.isLetterOrDigit(str.charAt(i))) {
+                sb.append(str.charAt(i));
+            }
+        }
+//until middle comparing is enough//faster
+        int left=0; int right=sb.length()-1;
+        while(left<right){  //O(n/2)
+            if(sb.charAt(left)==sb.charAt(right)){
+                left++;
+                right--;
+            }else return false;
+        }
+       return true;
+    }
+    //O(n) Time
+    //O(n) Space
+   public  static boolean twoPointerRegex(String str) {
+       if (str == null  || str.isBlank()) {
+           return true;
+       }
+       str = str.toLowerCase().replaceAll("[^a-z0-9]", "");
+       int left = 0, right = str.length() - 1;
+       while (left < right) {
+           if (str.charAt(left) == str.charAt(right)) {
+               left ++;
+               right--;
+           } else
+               return false;
+       }
+       return true;
+   }
+    //O(n) Time
+    //O(n) Space
 
 }
 /*
