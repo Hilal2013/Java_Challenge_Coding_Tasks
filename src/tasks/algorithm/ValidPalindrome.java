@@ -39,7 +39,7 @@ public class ValidPalindrome {
                 sb.append(str.charAt(i));
             }
         }
-//until middle comparing is enough//faster
+//until middle comparing is enough//faster//saving time and space
         int left=0; int right=sb.length()-1;
         while(left<right){  //O(n/2)
             if(sb.charAt(left)==sb.charAt(right)){
@@ -56,7 +56,7 @@ public class ValidPalindrome {
            return true;
        }
        str = str.toLowerCase().replaceAll("[^a-z0-9]", "");
-       int left = 0, right = str.length() - 1;
+       int left = 0, right = str.length() - 1;//
        while (left < right) {
            if (str.charAt(left) == str.charAt(right)) {
                left ++;
