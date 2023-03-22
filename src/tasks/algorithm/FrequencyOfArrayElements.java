@@ -41,7 +41,7 @@ public class FrequencyOfArrayElements {
                 if(map.containsKey(each)){
                     map.put(each,map.get(each)+1);
                 }else{
-                    map.put(each,1);
+                    map.put(each,2);
                 }
             }
             return map;

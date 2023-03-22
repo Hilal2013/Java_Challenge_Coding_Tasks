@@ -10,40 +10,49 @@ public class SumOfTwoNumbersTarget {
         int target = 8;
         int[] result = findSumOfTwoNumbersTarget(nums, target);
         System.out.println(Arrays.toString(result));//[3, 5]
-        int[] result2 = findTwoSum(nums, target);
-        System.out.println(Arrays.toString(result2));//[0, 1]
+        int[] result2 = twoSumWithTwoPointers(nums, target);
+        System.out.println(Arrays.toString(result2));
 
     }
 
     public static int[] findSumOfTwoNumbersTarget(int[] nums, int target) {
 
-        int[] arr = new int[2];
         for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
+            for (int j =1; j < nums.length; j++) {////I dont want to compare Im looking for pairs
+                if (i != j) {
                 if (nums[i] + nums[j] == target) {
 
-                    arr = new int[]{nums[i], nums[j]};
-// arr = new int[]{i,j};//if we want index numbers
+                        return new int[]{nums[i], nums[j]};
+                  //  new int[]{i,j};//if we want index numbers
+                    }
                 }
             }
         }
-        return arr;
+        return new int[]{};
 //What is the time complexity  O(n^2)
     }
-    //second solutionTwo point strategy;
-    public static int[] findTwoSum(int[] nums, int target) {
-        Arrays.sort(nums);
-        int left = 0, right = nums.length-1;
-        int[] arr = new int[2];
-        while(left<right){
-            if(nums[left]+nums[right]==target){
-                arr = new int[]{nums[left], nums[right]};
-            }else if(nums[left]+nums[right]>target){
-                left++;
 
-            }else  right--;
+    //second solution Two points strategy;
+    public static int[] twoSumWithTwoPointers(int[] nums, int target) {
+
+        int []  arr = new int[2];
+
+        int first = 0;
+        int second = first+1;
+
+        while(first<second) {
+            if(nums[first]+nums[second]==target){
+                arr[0] = first;
+                arr[1] = second;
+                break;
+            } else if(second==nums.length-1) {
+                first++;
+                second = first+1;
+            } else {
+                second++;
+            }
         }
-return arr;
+        return arr;
     }
 
 

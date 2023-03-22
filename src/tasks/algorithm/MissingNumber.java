@@ -10,23 +10,20 @@ public class MissingNumber {
     }
     public static int missingNumber(int[] nums) {
         Arrays.sort(nums);
-        int missingNumber=0;
+
 
         for (int i = 0; i < nums.length; i++) {
-            missingNumber++;
-
             if(nums[i]!=i){
-              if(missingNumber>nums.length){
-                  return missingNumber;
-              }else return i;
+             return i;
             }
-
-
         }
-
-        return missingNumber;
+        return nums.length;
     }
-    //time complexity n(log n)
+    //time complexity O(nlog n)
+
+
+
+
 }
 /*
 Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
